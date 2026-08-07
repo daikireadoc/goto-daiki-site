@@ -564,16 +564,19 @@ h1, h2, h3,
   align-items: start;
 }
 
-.photo-placeholder {
-  aspect-ratio: 4 / 5;
-  display: grid;
-  place-items: center;
+.profile-photo {
+  width: 100%;
+  max-width: 330px;
+  justify-self: center;
+}
+
+.profile-image {
+  display: block;
+  width: 100%;
+  height: auto;
   border-radius: 28px;
-  color: var(--ink-soft);
-  background: var(--white);
-  font-size: 12px;
-  letter-spacing: .18em;
-  border: 1px dashed var(--line-strong);
+  object-fit: cover;
+  object-position: center 42%;
 }
 
 .profile-content p {
@@ -1389,6 +1392,7 @@ footer {
   }
 
   .profile-photo {
+    width: 85%;
     max-width: 320px;
     margin: 0 auto;
   }
