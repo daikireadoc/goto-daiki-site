@@ -957,21 +957,74 @@ h1, h2, h3,
   transform: translateY(-4px);
 }
 
-.bom-grid {
+.yarou-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 88px;
+  align-items: start;
 }
 
-.bom-grid h2 {
-  margin-bottom: 0;
+.yarou-copy h2 {
+  margin: 12px 0 20px;
+  font-size: clamp(72px, 9vw, 132px);
+  line-height: .84;
+  letter-spacing: -.075em;
 }
 
-.bom-actions {
+.yarou-status-group {
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
-  margin-top: 8px;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.yarou-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  color: var(--ink-soft);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .14em;
+}
+
+.yarou-status span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #4a4a4a;
+  box-shadow: 0 0 0 5px rgba(0, 0, 0, .1);
+}
+
+.yarou-tagline {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(24px, 3vw, 38px);
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: -.04em;
+}
+
+.yarou-content .lead {
+  margin-top: 0;
+}
+
+.yarou-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.yarou-button {
+  flex: 1;
+  min-width: 0;
+}
+
+.yarou-app-button[aria-disabled="true"] {
+  cursor: default;
 }
 
 /* Contact */
@@ -1299,19 +1352,13 @@ footer {
    Responsive
    ========================================================================== */
 @media (max-width: 768px) {
-  .bom-actions {
-    display: flex;
+  .yarou-actions {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
-    width: 100%;
-    margin: 32px auto 0;
+    gap: 12px;
   }
 
-  .bom-actions .button {
-    width: 85%;
-    max-width: 320px;
+  .yarou-button {
+    width: 100%;
     text-align: center;
   }
 }
@@ -1331,7 +1378,7 @@ footer {
 
   .profile-grid,
   .web-grid,
-  .bom-grid {
+  .yarou-grid {
     grid-template-columns: 1fr;
     gap: 48px;
   }

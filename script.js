@@ -77,36 +77,20 @@ if (prefersReducedMotion) {
 }
 
 /* ==========================================================================
-   Sponsor detail modal
+   YAROU app link (set the URL in index.html when the app is published)
    ========================================================================== */
-const sponsorButton = document.getElementById('sponsorDetailButton');
-const sponsorModal = document.getElementById('sponsorModal');
-const sponsorModalClose = document.getElementById('sponsorModalClose');
+const yarouAppButton = document.querySelector('[data-yarou-app-url]');
 
-if (sponsorButton && sponsorModal) {
-  const openSponsorModal = () => {
-    sponsorModal.classList.add('open');
-    document.body.style.overflow = 'hidden';
-    sponsorModalClose.focus();
-  };
+if (yarouAppButton) {
+  const yarouAppUrl = yarouAppButton.dataset.yarouAppUrl.trim();
 
-  const closeSponsorModal = () => {
-    sponsorModal.classList.remove('open');
-    document.body.style.overflow = '';
-    sponsorButton.focus();
-  };
+  if (yarouAppUrl) {
+    yarouAppButton.setAttribute('aria-disabled', 'false');
+  }
 
-  sponsorButton.addEventListener('click', openSponsorModal);
-  sponsorModalClose.addEventListener('click', closeSponsorModal);
-
-  sponsorModal.querySelectorAll('[data-modal-close]').forEach((el) => {
-    el.addEventListener('click', closeSponsorModal);
-  });
-
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape' && sponsorModal.classList.contains('open')) {
-      closeSponsorModal();
-    }
+  yarouAppButton.addEventListener('click', () => {
+    if (!yarouAppUrl) return;
+    window.location.assign(yarouAppUrl);
   });
 }
 
