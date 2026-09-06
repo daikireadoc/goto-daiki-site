@@ -791,6 +791,11 @@ h1, h2, h3,
   align-items: start;
 }
 
+.price-plans {
+  display: grid;
+  gap: 24px;
+}
+
 .check-list {
   list-style: none;
   padding: 0;
@@ -813,6 +818,14 @@ h1, h2, h3,
 .price-card {
   padding: 40px;
   border-radius: 28px;
+}
+
+.price-plan-number {
+  margin: 0 0 14px;
+  color: var(--ink-soft);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .16em;
 }
 
 .price-head {
@@ -858,6 +871,10 @@ h1, h2, h3,
   gap: 12px;
 }
 
+.price-row-single {
+  justify-content: flex-end;
+}
+
 .price-row-label {
   font-size: 14px;
   font-weight: 600;
@@ -888,6 +905,42 @@ h1, h2, h3,
 
 .price-support-note + hr {
   margin-top: 0;
+}
+
+.price-description {
+  margin: 18px 0 0;
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--ink-soft);
+}
+
+.price-check-list {
+  margin-top: 24px;
+}
+
+.price-check-list li {
+  padding: 11px 0;
+  font-size: 13px;
+}
+
+.price-recommendation {
+  margin: 26px 0 0;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.7;
+}
+
+.price-recommendation span {
+  display: block;
+  margin-bottom: 2px;
+  color: var(--ink-soft);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .12em;
 }
 
 .price-card hr {
