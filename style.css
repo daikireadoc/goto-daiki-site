@@ -1067,6 +1067,7 @@ h1, h2, h3,
 
 .yarou-actions {
   display: flex;
+  flex-wrap: wrap;
   gap: 12px;
   margin-top: 30px;
 }
@@ -1078,6 +1079,81 @@ h1, h2, h3,
 
 .yarou-app-button[aria-disabled="true"] {
   cursor: default;
+}
+
+.yarou-privacy-button {
+  flex: 0 0 100%;
+  background: #ffffff;
+  color: #1d1d1f;
+  border-color: var(--line-strong);
+  box-shadow: none;
+}
+
+.yarou-privacy-button:hover {
+  background: #f5f5f5;
+  color: #000000;
+  border-color: #000000;
+  box-shadow: none;
+}
+
+/* YAROU privacy policy */
+.privacy-page {
+  min-height: 100vh;
+  background: var(--white);
+}
+
+.privacy-header {
+  position: relative;
+}
+
+.privacy-main {
+  padding: 120px 0 140px;
+}
+
+.privacy-content {
+  width: min(100% - 40px, 760px);
+  margin: 0 auto;
+}
+
+.privacy-content h1 {
+  margin: 0 0 16px;
+  font-size: clamp(36px, 6vw, 62px);
+  line-height: 1.08;
+  letter-spacing: -.05em;
+}
+
+.privacy-updated {
+  margin: 0 0 54px;
+  color: var(--ink-soft);
+  font-size: 14px;
+}
+
+.privacy-intro {
+  margin-bottom: 56px;
+}
+
+.privacy-section {
+  margin-top: 52px;
+}
+
+.privacy-section h2 {
+  margin: 0 0 20px;
+  font-size: 22px;
+  line-height: 1.5;
+  letter-spacing: -.02em;
+}
+
+.privacy-content p {
+  margin: 0 0 18px;
+  color: var(--ink-soft);
+  font-size: 15px;
+  line-height: 2;
+}
+
+.privacy-content a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 /* Contact */
@@ -1414,6 +1490,10 @@ footer {
     width: 100%;
     text-align: center;
   }
+
+  .yarou-privacy-button {
+    flex: none;
+  }
 }
 
 @media (max-width: 900px) {
@@ -1486,6 +1566,36 @@ footer {
 
   .section {
     padding: 100px 0;
+  }
+
+  .privacy-main {
+    padding: 88px 0 100px;
+  }
+
+  .privacy-content {
+    width: min(100% - 32px, 760px);
+  }
+
+  .privacy-updated {
+    margin-bottom: 40px;
+  }
+
+  .privacy-intro {
+    margin-bottom: 44px;
+  }
+
+  .privacy-section {
+    margin-top: 42px;
+  }
+
+  .privacy-section h2 {
+    margin-bottom: 16px;
+    font-size: 20px;
+  }
+
+  .privacy-content p {
+    font-size: 14px;
+    line-height: 1.95;
   }
 
   h2 {
