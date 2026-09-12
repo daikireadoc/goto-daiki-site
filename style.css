@@ -828,6 +828,11 @@ h1, h2, h3,
   letter-spacing: .16em;
 }
 
+.price-content-heading {
+  margin-top: 28px;
+  margin-bottom: 0;
+}
+
 .price-head {
   display: flex;
   align-items: center;
