@@ -2349,20 +2349,68 @@ footer {
     gap: 52px;
   }
 
+  #profile > .container > .section-number,
+  .contact-inner .section-number {
+    display: flex;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+  }
+
+  #profile > .container > h2,
+  #profile > .container > .section-heading-jp {
+    width: 100%;
+    text-align: center;
+  }
+
+  #profile > .container > .section-heading-jp {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .profile-photo {
     width: 100%;
     max-width: none;
   }
 
+  .profile-content {
+    width: 100%;
+    text-align: center;
+  }
+
   .profile-content .lead {
-    text-align: left;
+    width: min(100%, 320px);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
     margin-bottom: 28px;
+  }
+
+  .profile-content p:not(.lead) {
+    width: min(100%, 320px);
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.9;
+    text-align: center;
   }
 
   .profile-social,
   .profile-social a {
     width: auto;
     max-width: 100%;
+  }
+
+  .profile-social {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .profile-social a {
+    width: fit-content !important;
+    min-height: 42px;
+    padding: 9px 16px;
+    font-size: 12px;
   }
 
   .yarou-copy h2 {
@@ -2412,7 +2460,8 @@ footer {
   }
 
   .contact-section h2 {
-    width: min(100%, 360px);
+    width: 100%;
+    max-width: 330px;
     margin-left: auto;
     margin-right: auto;
     font-size: clamp(42px, 12vw, 58px);
@@ -2420,7 +2469,8 @@ footer {
   }
 
   .contact-section p {
-    width: min(100%, 330px);
+    width: 100%;
+    max-width: 300px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -2433,7 +2483,12 @@ footer {
   }
 
   .contact-social {
+    width: 100%;
     justify-content: center;
+  }
+
+  .contact-inner {
+    justify-items: center;
   }
 
   .contact-social a {
