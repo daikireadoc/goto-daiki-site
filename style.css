@@ -1847,6 +1847,12 @@ h1 {
   gap: 10px;
 }
 
+.hero-actions .button {
+  flex: 0 0 148px;
+  width: 148px;
+  padding: 0 16px;
+}
+
 .hero-pillars {
   width: min(1180px, calc(100% - 64px));
   margin-top: auto;
@@ -2310,7 +2316,8 @@ footer {
   }
 
   .hero-actions .button {
-    width: auto;
+    flex-basis: 148px;
+    width: 148px;
   }
 
   .hero-pillars {
