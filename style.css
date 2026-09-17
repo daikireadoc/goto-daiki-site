@@ -2366,25 +2366,81 @@ footer {
   }
 
   .yarou-copy h2 {
-    font-size: clamp(86px, 27vw, 122px);
+    font-size: clamp(70px, 20vw, 86px);
+  }
+
+  .yarou-grid {
+    gap: 44px;
+  }
+
+  .yarou-copy {
+    text-align: center;
+  }
+
+  .yarou-status-group {
+    justify-content: center;
   }
 
   .yarou-content {
     padding-top: 30px;
+    text-align: center;
   }
 
   .yarou-content .lead {
     font-size: 20px;
   }
 
+  .yarou-content .lead,
+  .yarou-content > p:not(.lead) {
+    width: min(100%, 320px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .yarou-actions {
+    justify-items: center;
+    gap: 7px;
+    margin-top: 28px;
+  }
+
+  .yarou-button {
+    width: clamp(180px, 54%, 210px);
+    min-width: 0;
+    min-height: 42px;
+    padding: 0 12px;
+    font-size: 10px;
+  }
+
   .contact-section h2 {
-    font-size: clamp(48px, 14vw, 72px);
+    width: min(100%, 360px);
+    margin-left: auto;
+    margin-right: auto;
+    font-size: clamp(42px, 12vw, 58px);
+    text-align: center;
+  }
+
+  .contact-section p {
+    width: min(100%, 330px);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
   }
 
   .contact-social,
   .contact-social a {
     width: auto;
     max-width: 100%;
+  }
+
+  .contact-social {
+    justify-content: center;
+  }
+
+  .contact-social a {
+    width: fit-content !important;
+    min-height: 42px;
+    padding: 9px 16px;
+    font-size: 12px;
   }
 
   .mobile-nav nav {
